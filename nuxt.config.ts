@@ -1,10 +1,8 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    head: {
-      title: 'TheHackFix - Coming Soon',
-      meta: [
-        { name: 'description', content: 'TheHackFix website is coming soon. Stay tuned for updates!' }
-      ]
-    }
-  }
-})
+  devtools: { enabled: true },
+  routeRules: {
+    // prerender index route by default
+    '/': { prerender: true },
+  },
+});
